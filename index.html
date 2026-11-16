@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ລະບົບຈັດການຫ້ອງສະໝຸດ</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700&family=Noto+Serif+Lao:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="#dashboard">
+      <img class="brand-logo" src="logo.png" alt="">
+      <span class="brand-text">
+        <strong>ຫ້ອງສະໝຸດ</strong>
+        <small>ລະບົບການຈັດການ</small>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="ເມນູຫຼັກ"></nav>
+    <div class="side-foot">
+      <div class="rate">
+        <span>ອັດຕາຄ່າປັບໄໝ</span>
+        <strong>2,000 ກີບ / ມື້</strong>
+      </div>
+      <small>ກຳນົດຢືມ 7 ມື້ ຕໍ່ຄັ້ງ</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div class="crumbs"><span>ຫ້ອງສະໝຸດ</span><i aria-hidden="true">›</i><strong id="crumb"></strong></div>
+      <div class="top-right">
+        <div class="when"><span class="dot" aria-hidden="true"></span><span id="top-date"></span><b id="clock" class="num"></b></div>
+        <a class="bell" id="bell" href="#loans" aria-label="ລາຍການເກີນກຳນົດ">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.500 2h-15zM10 20.500a2.200 2.200 0 004 0"/></svg>
+          <span class="count num" id="bell-count" hidden></span>
+        </a>
+        <button class="btn primary sm" data-act="borrow">ຢືມປຶ້ມ</button>
+        <div class="user"><span class="avatar" style="--h:40">ບ</span><div><strong>ບັນນາລັກ</strong><small>ຜູ້ດູແລລະບົບ</small></div></div>
+      </div>
+    </header>
+    <div id="view" class="view"></div>
+    <footer class="foot">
+      <div class="foot-in">
+        <div class="foot-brand">
+          <img src="logo.png" alt="Library Management System">
+          <div><strong>ຫ້ອງສະໝຸດ</strong><p>ລະບົບການຈັດການຫ້ອງສະໝຸດ: ປຶ້ມ, ສະມາຊິກ, ການຢືມ - ຄືນ ແລະ ຄ່າປັບໄໝ ຢູ່ໃນບ່ອນດຽວ.</p></div>
+        </div>
+        <div class="foot-col">
+          <h3>ເມນູ</h3>
+          <a href="#dashboard">ພາບລວມ</a><a href="#books">ປຶ້ມ</a><a href="#members">ສະມາຊິກ</a><a href="#loans">ຢືມ - ຄືນ</a><a href="#fines">ຄ່າປັບໄໝ</a><a href="#categories">ໝວດໝູ່</a>
+        </div>
+        <div class="foot-col">
+          <h3>ລະບຽບການຢືມ</h3>
+          <p>ຢືມໄດ້ 7 ມື້ ຕໍ່ຄັ້ງ</p><p>ສົ່ງຊ້າ ປັບໄໝ 2,000 ກີບ ຕໍ່ມື້</p><p>ປຶ້ມຫົວເລື່ອງດຽວກັນ ຢືມໄດ້ເທື່ອລະ 1 ຫົວ</p>
+        </div>
+      </div>
+      <div class="foot-base"><span>© 2026 Library Management System</span><span class="spines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    </footer>
+  </main>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
+</div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
